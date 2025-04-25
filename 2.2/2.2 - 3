@@ -1,1 +1,39 @@
+class TwoNumbers:
+    def __init__(self, first, second):
+        self.first = first
+        self.second = second
+
+    def display_numbers(self):
+        print(f'First number: {self.get_first()}\n'
+              f'Second number: {self.get_second()}')
+
+    def calculate_sum(self):
+        return self.get_first() + self.get_second()
+
+    def find_greatest(self):
+        return max(self.get_first(), self.get_second())
+
+    def get_first(self):
+        return self.first
+
+    def set_first(self, first):
+        self.first = first
+
+    def get_second(self):
+        return self.second
+
+    def set_second(self, second):
+        self.second = second
+
+
+numbers = TwoNumbers(6,12)
+numbers.display_numbers()
+print(f'Sum: {numbers.calculate_sum()}\n')
+print(f'Greatest: {numbers.find_greatest()}\n')
+
+numbers.set_first(34)
+numbers.set_second(68)
+numbers.display_numbers()
+print(f'Sum: {numbers.calculate_sum()}\n')
+print(f'Greatest: {numbers.find_greatest()}\n')
 
