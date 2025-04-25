@@ -1,1 +1,32 @@
+class Student:
+    def __init__(self, surname, birthday, group_number, grades):
+        self.surname = surname
+        self.birthday = birthday
+        self.group_number = group_number
+        self.grades = grades
 
+    def get_birthday(self):
+        return self.birthday
+    def set_birthday(self,birthday):
+        self.birthday = birthday
+
+    def get_surname(self):
+        return self.surname
+    def set_surname(self, surname):
+        self.surname = surname
+
+    def get_group_number(self):
+        return self.group_number
+    def set_group_number(self, group_number):
+        self.group_number = group_number
+
+    def info_of_student(self):
+        print(f'student surname: {self.get_surname()}\n')
+        print(f'student birthday: {self.get_birthday()}\n')
+
+Jareld = Student("Nick", "01.02.1999", "643", [5,4,3,4,5])
+Jareld.info_of_student()
+Jareld.set_birthday("24.09.1984")
+Jareld.set_surname("Jareld")
+Jareld.set_group_number("642")
+Jareld.info_of_student()
