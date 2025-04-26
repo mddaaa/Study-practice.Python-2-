@@ -1,1 +1,17 @@
+class Worker:
+    def __init__(self, name, surname, rate, days):
+        self.name = name
+        self.surname = surname
+        self.rate = rate
+        self.days = days
+
+    def GetSalary(self):
+        salary = self.rate * self.days
+        print(f'Salary: {self.name} {self.surname} == {salary}')
+
+First_Worker = Worker("Anton", "Dushev", 340, 54)
+Second_Worker = Worker("Nicolay", "Donskoy", 443, 43)
+
+First_Worker.GetSalary()
+Second_Worker.GetSalary()
 
