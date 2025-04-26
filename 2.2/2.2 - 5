@@ -1,1 +1,9 @@
+class Destructor:
+    def __init__(self, first=52, second=84):
+        self.first = first
+        self.second = second
+
+    def __del__(self):
+        print(f'first {self.first} и second {self.second} - has been deleted')
+Destructor = Destructor()
 
