@@ -1,1 +1,24 @@
+class Value_counting:
+    def __init__(self, value=0):
+        self.__value = value
 
+    def increase(self):
+        self.__value += 1
+
+    def decrease(self):
+        self.__value -= 1
+
+    def get_counter_value(self):
+        return self.__value
+
+
+count = Value_counting(15)
+print(f'Произвольное значение {count.get_counter_value()}')
+for i in range(2):
+    count.increase()
+print(f'число после {i+1} инкременации {count.get_counter_value()}')
+
+count_1 = Value_counting()
+for i1 in range(2):
+    count_1.decrease()
+print(f'число после {i+1} дискриминации {count_1.get_counter_value()}')
