@@ -1,1 +1,36 @@
+class Calculation:
+    def __init__(self, calculation_line=""):
+        self.__calculation_line = calculation_line
+    def set_last_symbol_calculation_line(self, symbol):
+        self.__calculation_line += symbol
+    def get_last_symbol(self):
+        line = self.get_calculation_line()
+        if line:
+            return line[-1]
+        else:
+            return None
+    def delete_last_symbol(self):
+        line = self.get_calculation_line()
+        if line:
+            self.set_calculation_line(line[:-1])
+        else:
+            return None
+    def get_calculation_line(self):
+        return self.__calculation_line
+    def set_calculation_line(self, calculation_line):
+        self.__calculation_line = calculation_line
+
+calculation = Calculation()
+print(f"Original line: {calculation.get_calculation_line()}")
+calculation.set_calculation_line("4 * 7 + 1 + 1")
+print(f"Line after the changes: {calculation.get_calculation_line()}")
+calculation.set_last_symbol_calculation_line(" ? ")
+print(f"Line after adding the symbol: {calculation.get_calculation_line()}")
+
+if calculation.get_calculation_line():
+    print(f"Last symbol: {calculation.get_last_symbol()}")
+    calculation.delete_last_symbol()
+    print(f"Line after deleting the last symbol: {calculation.get_calculation_line()}")
+else:
+    print("Line is empty")
 
